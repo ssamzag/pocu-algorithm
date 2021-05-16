@@ -130,12 +130,14 @@ public class Program {
             Node root1 = LinkedList.append(null, 10);
 
             root1 = LinkedList.append(root1, 11);
-            root1 = LinkedList.append(root1, 12);
+            //root1 = LinkedList.append(root1, 12);
 
             Node root2 = LinkedList.append(null, 13);
 
             root2 = LinkedList.append(root2, 14);
-            //root2 = LinkedList.append(root2, 15);
+            root2 = LinkedList.append(root2, 15);
+            root2 = LinkedList.append(root2, 16);
+            root2 = LinkedList.append(root2, 17);
 
             Node newRoot = LinkedList.interleaveOrNull(root1, root2); // newRoot: 10, list: 10 -> 13 -> 11 -> 14 -> 12 -> 15
 
@@ -155,11 +157,23 @@ public class Program {
 
             next = next.getNextOrNull();
 
-            assert (next.getData() == 12);
+            assert (next.getData() == 15);
 
             next = next.getNextOrNull();
 
-            assert (next == null);
+            assert (next.getData() == 16);
+
+            next = next.getNextOrNull();
+
+            assert (next.getData() == 17);
+
+            //next = next.getNextOrNull();
+
+            //assert (next.getData() == 12);
+
+            //next = next.getNextOrNull();
+
+            //assert (next == null);
         }
 
         {

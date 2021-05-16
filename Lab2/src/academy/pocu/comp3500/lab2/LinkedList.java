@@ -38,7 +38,7 @@ public class LinkedList {
 
     public static Node insertAt(final Node rootOrNull, final int index, final int data) {
         if (rootOrNull == null || index < 0) {
-            return null;
+            return rootOrNull;
         }
 
         if (index == 0) {
@@ -72,20 +72,20 @@ public class LinkedList {
             return null;
         }
 
-        if (index == 0) {
-            return rootOrNull.getNextOrNull();
-        }
-
-        Node current = rootOrNull.getNextOrNull();
-        Node prevNode = rootOrNull;
-        int idx = 1;
+        Node current = rootOrNull;
+        Node prev = null;
+        int idx = 0;
 
         while (current != null) {
             if (idx++ == index) {
-                prevNode.setNext(current.getNextOrNull());
+                if (prev == null) {
+                    return current.getNextOrNull();
+                }
+                prev.setNext(current.getNextOrNull());
                 break;
             }
-            prevNode = current;
+
+            prev = current;
             current = current.getNextOrNull();
         }
 
@@ -134,48 +134,48 @@ public class LinkedList {
         }
 
         Node current = rootOrNull;
+        Node prev = null;
+        Node next = null;
 
-        int size = 0;
         while (current != null) {
-            size++;
-            current = current.getNextOrNull();
+            next = current.getNextOrNull();
+
+            current.setNext(prev);
+            prev = current;
+            current = next;
         }
 
-        Node reversedNode = LinkedList.getOrNull(rootOrNull, size - 1);
-        current = reversedNode;
 
-        for (int i = size - 1; i >= 0; i--) {
-            current.setNext(LinkedList.getOrNull(rootOrNull, i));
-            current = LinkedList.getOrNull(rootOrNull, i);
-            if (i == 0) {
-                LinkedList.getOrNull(rootOrNull, i).setNext(null);
-            }
-        }
-
-        return reversedNode;
+        return prev;
     }
 
     public static Node interleaveOrNull(final Node root0OrNull, final Node root1OrNull) {
-        if (root0OrNull == null || root1OrNull == null) {
+        if (root0OrNull == null && root1OrNull == null) {
             return null;
         }
 
+
         Node current0 = root0OrNull;
         Node current1 = root1OrNull;
+        Node temp0;
+        Node temp1;
+
         Node newNode = null;
+        Node result = current0;
 
-        while (current0 != null || current1 != null) {
-            if (current0 != null) {
-                newNode = LinkedList.append(newNode, current0.getData());
-                current0 = current0.getNextOrNull();
-            }
-            if (current1 != null) {
-                newNode = LinkedList.append(newNode, current1.getData());
-                current1 = current1.getNextOrNull();
-            }
+        while (current0 != null && current1 != null) {
+            temp0 = current0.getNextOrNull();
+            temp1 = current1.getNextOrNull();
 
+            if (current0.getNextOrNull() != null) {
+                current1.setNext(current0.getNextOrNull());
+            }
+            current0.setNext(current1);
+
+            current0 = temp0;
+            current1 = temp1;
         }
 
-        return newNode;
+        return result;
     }
 }
