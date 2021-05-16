@@ -37,8 +37,8 @@ public class LinkedList {
     }
 
     public static Node insertAt(final Node rootOrNull, final int index, final int data) {
-        if (rootOrNull == null || index < 0) {
-            return rootOrNull;
+        if (rootOrNull == null && index < 0) {
+            return null;
         }
 
         if (index == 0) {
@@ -159,6 +159,12 @@ public class LinkedList {
         Node temp1;
 
         Node result = current0;
+
+        if (current0 == null) {
+            return current1;
+        } else if (current1 == null) {
+            return current0;
+        }
 
         while (current0 != null && current1 != null) {
             temp0 = current0.getNextOrNull();

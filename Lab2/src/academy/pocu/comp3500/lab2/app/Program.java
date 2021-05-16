@@ -71,6 +71,19 @@ public class Program {
         }
 
         {
+
+            var root = LinkedList.insertAt(null, 0, 11);
+            assert (root.getData() == 11);
+
+            root = LinkedList.insertAt(root, 3, 11);
+            assert (root. getNextOrNull() == null);
+
+            root = LinkedList.insertAt(root, 1, 13);
+            assert (root. getNextOrNull().getData() == 13);
+
+        }
+
+        {
             Node root = LinkedList.append(null, 10);
 
             root = LinkedList.insertAt(root, 1, 11);
@@ -173,6 +186,35 @@ public class Program {
             assert (next.getData() == 13);
             next = next.getNextOrNull();
             assert (next.getData() == 14);
+            next = next.getNextOrNull();
+            assert (next.getData() == 15);
+
+        }
+
+        {
+            Node root1 = LinkedList.append(null, 10);
+
+            root1 = LinkedList.append(root1, 11);
+            root1 = LinkedList.append(root1, 12);
+            root1 = LinkedList.append(root1, 13);
+            root1 = LinkedList.append(root1, 14);
+            root1 = LinkedList.append(root1, 15);
+
+            Node newRoot = LinkedList.interleaveOrNull(root1, null); // newRoot: 10, list: 10 -> 13 -> 11 -> 14 -> 12 -> 15
+            assert (newRoot.getData() == 10);
+
+            var next = newRoot.getNextOrNull();
+            assert (next.getData() == 11);
+
+            next = next.getNextOrNull();
+            assert (next.getData() == 12);
+
+            next = next.getNextOrNull();
+            assert (next.getData() == 13);
+
+            next = next.getNextOrNull();
+            assert (next.getData() == 14);
+
             next = next.getNextOrNull();
             assert (next.getData() == 15);
 
