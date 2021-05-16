@@ -48,10 +48,10 @@ public class LinkedList {
         Node current = rootOrNull.getNextOrNull();
         Node prevNode = rootOrNull;
         Node newNode = new Node(data);
-        int idx = 1;
+        int currentIndex = 1;
 
         while (current != null) {
-            if (idx++ == index) {
+            if (currentIndex++ == index) {
                 prevNode.setNext(newNode);
                 newNode.setNext(current);
                 return rootOrNull;
@@ -60,7 +60,7 @@ public class LinkedList {
             current = current.getNextOrNull();
         }
 
-        if (idx == index) {
+        if (currentIndex == index) {
             prevNode.setNext(newNode);
         }
 
