@@ -60,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579481363148</updated>
-      <workItem from="1621169011230" duration="20653000" />
+      <workItem from="1621169011230" duration="21510000" />
     </task>
     <servers />
   </component>
@@ -72,50 +72,54 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="761" y="275" key="#Project_Structure/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621169109943" />
-    <state width="458" height="466" key="DebuggerActiveHint" timestamp="1621189814753">
+    <state x="736" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621190180106">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="458" height="466" key="DebuggerActiveHint/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621189814753" />
+    <state x="736" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621190180106" />
+    <state width="458" height="466" key="DebuggerActiveHint" timestamp="1621190360207">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="458" height="466" key="DebuggerActiveHint/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621190360207" />
     <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1621185695703">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1061" y="456" key="FileChooserDialogImpl/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621185695703" />
-    <state width="2517" height="482" key="GridCell.Tab.0.bottom" timestamp="1621189805113">
+    <state width="2517" height="482" key="GridCell.Tab.0.bottom" timestamp="1621190683873">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="482" key="GridCell.Tab.0.bottom/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621189805113" />
-    <state width="2517" height="482" key="GridCell.Tab.0.center" timestamp="1621189805113">
+    <state width="2517" height="482" key="GridCell.Tab.0.bottom/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621190683873" />
+    <state width="2517" height="482" key="GridCell.Tab.0.center" timestamp="1621190683873">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="482" key="GridCell.Tab.0.center/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621189805113" />
-    <state width="2517" height="482" key="GridCell.Tab.0.left" timestamp="1621189805113">
+    <state width="2517" height="482" key="GridCell.Tab.0.center/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621190683873" />
+    <state width="2517" height="482" key="GridCell.Tab.0.left" timestamp="1621190683873">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="482" key="GridCell.Tab.0.left/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621189805113" />
-    <state width="2517" height="482" key="GridCell.Tab.0.right" timestamp="1621189805113">
+    <state width="2517" height="482" key="GridCell.Tab.0.left/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621190683873" />
+    <state width="2517" height="482" key="GridCell.Tab.0.right" timestamp="1621190683873">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="482" key="GridCell.Tab.0.right/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621189805113" />
-    <state width="2517" height="482" key="GridCell.Tab.1.bottom" timestamp="1621189805264">
+    <state width="2517" height="482" key="GridCell.Tab.0.right/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621190683873" />
+    <state width="2517" height="482" key="GridCell.Tab.1.bottom" timestamp="1621190684178">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="482" key="GridCell.Tab.1.bottom/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621189805264" />
-    <state width="2517" height="482" key="GridCell.Tab.1.center" timestamp="1621189805264">
+    <state width="2517" height="482" key="GridCell.Tab.1.bottom/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621190684178" />
+    <state width="2517" height="482" key="GridCell.Tab.1.center" timestamp="1621190684178">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="482" key="GridCell.Tab.1.center/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621189805264" />
-    <state width="2517" height="482" key="GridCell.Tab.1.left" timestamp="1621189805264">
+    <state width="2517" height="482" key="GridCell.Tab.1.center/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621190684178" />
+    <state width="2517" height="482" key="GridCell.Tab.1.left" timestamp="1621190684178">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="482" key="GridCell.Tab.1.left/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621189805264" />
-    <state width="2517" height="482" key="GridCell.Tab.1.right" timestamp="1621189805264">
+    <state width="2517" height="482" key="GridCell.Tab.1.left/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621190684178" />
+    <state width="2517" height="482" key="GridCell.Tab.1.right" timestamp="1621190684178">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="482" key="GridCell.Tab.1.right/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621189805264" />
-    <state x="761" y="275" key="SettingsEditor" timestamp="1621169078467">
+    <state width="2517" height="482" key="GridCell.Tab.1.right/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621190684178" />
+    <state x="761" y="275" key="SettingsEditor" timestamp="1621190161254">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="761" y="275" key="SettingsEditor/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621169078467" />
+    <state x="761" y="275" key="SettingsEditor/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621190161254" />
     <state x="677" y="311" key="new project wizard" timestamp="1621185685228">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -130,39 +134,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/academy/pocu/comp3500/lab2/app/Program.java</url>
-          <line>327</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/academy/pocu/comp3500/lab2/app/Program.java</url>
-          <line>316</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/academy/pocu/comp3500/lab2/Queue.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/academy/pocu/comp3500/lab2/Queue.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/academy/pocu/comp3500/lab2/app/Program.java</url>
-          <line>310</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/academy/pocu/comp3500/lab2/app/Program.java</url>
-          <line>202</line>
-          <option name="timeStamp" value="43" />
+          <line>74</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
-        <PinnedItemInfo parentTag="academy.pocu.comp3500.lab2.datastructure.Node" memberName="next" />
+        <PinnedItemInfo parentTag="academy.pocu.comp3500.lab2.datastructure.Node" memberName="data" />
       </pinned-members>
     </pin-to-top-manager>
   </component>

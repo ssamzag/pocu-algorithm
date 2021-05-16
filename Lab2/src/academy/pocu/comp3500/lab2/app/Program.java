@@ -75,11 +75,11 @@ public class Program {
             var root = LinkedList.insertAt(null, 0, 11);
             assert (root.getData() == 11);
 
-            root = LinkedList.insertAt(root, 3, 11);
-            assert (root. getNextOrNull() == null);
+            root = LinkedList.insertAt(null, 1, 11);
+            assert (root == null);
 
-            root = LinkedList.insertAt(root, 1, 13);
-            assert (root. getNextOrNull().getData() == 13);
+            root = LinkedList.insertAt(null, 4, 11);
+            assert (root == null);
 
         }
 
