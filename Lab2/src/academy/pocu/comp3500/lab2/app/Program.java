@@ -68,6 +68,19 @@ public class Program {
         {
             Node root = LinkedList.append(null, 10);
 
+            root = LinkedList.insertAt(root, 1, 11);
+
+            assert (root.getNextOrNull().getData() == 11);
+
+            root = LinkedList.insertAt(root, 3, 11);
+
+            assert (root.getNextOrNull().getData() == 11);
+
+        }
+
+        {
+            Node root = LinkedList.append(null, 10);
+
             root = LinkedList.append(root, 11);
             root = LinkedList.append(root, 12);
             root = LinkedList.append(root, 13);
@@ -122,7 +135,7 @@ public class Program {
             Node root2 = LinkedList.append(null, 13);
 
             root2 = LinkedList.append(root2, 14);
-            root2 = LinkedList.append(root2, 15);
+            //root2 = LinkedList.append(root2, 15);
 
             Node newRoot = LinkedList.interleaveOrNull(root1, root2); // newRoot: 10, list: 10 -> 13 -> 11 -> 14 -> 12 -> 15
 
@@ -146,7 +159,7 @@ public class Program {
 
             next = next.getNextOrNull();
 
-            assert (next.getData() == 15);
+            assert (next == null);
         }
 
         {

@@ -7,17 +7,17 @@ public final class Queue {
     private int size;
 
     public void enqueue(final int data) {
-        queue = LinkedList.append(queue, data);
+        queue = LinkedList.prepend(queue, data);
         ++size;
     }
 
     public int peek() {
-        return queue.getData();
+        return LinkedList.getOrNull(queue, size - 1).getData();
     }
 
     public int dequeue() {
-        int dequeue = queue.getData();
-        queue = LinkedList.removeAt(queue, 0);
+        int dequeue = LinkedList.getOrNull(queue, size - 1).getData();
+        queue = LinkedList.removeAt(queue, size - 1);
         --size;
 
         return dequeue;

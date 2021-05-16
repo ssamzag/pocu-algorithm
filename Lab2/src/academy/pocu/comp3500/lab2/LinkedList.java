@@ -45,19 +45,23 @@ public class LinkedList {
             return LinkedList.prepend(rootOrNull, data);
         }
 
-        Node current = rootOrNull;
-        Node prevNode = null;
+        Node current = rootOrNull.getNextOrNull();
+        Node prevNode = rootOrNull;
         Node newNode = new Node(data);
-        int idx = 0;
+        int idx = 1;
 
         while (current != null) {
             if (idx++ == index) {
                 prevNode.setNext(newNode);
                 newNode.setNext(current);
-                break;
+                return rootOrNull;
             }
             prevNode = current;
             current = current.getNextOrNull();
+        }
+
+        if (idx == index) {
+            prevNode.setNext(newNode);
         }
 
         return rootOrNull;
@@ -72,9 +76,10 @@ public class LinkedList {
             return rootOrNull.getNextOrNull();
         }
 
-        Node current = rootOrNull;
-        Node prevNode = null;
-        int idx = 0;
+        Node current = rootOrNull.getNextOrNull();
+        Node prevNode = rootOrNull;
+        int idx = 1;
+
         while (current != null) {
             if (idx++ == index) {
                 prevNode.setNext(current.getNextOrNull());
@@ -129,14 +134,25 @@ public class LinkedList {
         }
 
         Node current = rootOrNull;
-        Node newNode = null;
 
+        int size = 0;
         while (current != null) {
-            newNode = LinkedList.prepend(newNode, current.getData());
+            size++;
             current = current.getNextOrNull();
         }
 
-        return newNode;
+        Node reversedNode = LinkedList.getOrNull(rootOrNull, size - 1);
+        current = reversedNode;
+
+        for (int i = size - 1; i >= 0; i--) {
+            current.setNext(LinkedList.getOrNull(rootOrNull, i));
+            current = LinkedList.getOrNull(rootOrNull, i);
+            if (i == 0) {
+                LinkedList.getOrNull(rootOrNull, i).setNext(null);
+            }
+        }
+
+        return reversedNode;
     }
 
     public static Node interleaveOrNull(final Node root0OrNull, final Node root1OrNull) {
@@ -148,7 +164,7 @@ public class LinkedList {
         Node current1 = root1OrNull;
         Node newNode = null;
 
-        while (current0 != null && current1 != null) {
+        while (current0 != null || current1 != null) {
             if (current0 != null) {
                 newNode = LinkedList.append(newNode, current0.getData());
                 current0 = current0.getNextOrNull();
