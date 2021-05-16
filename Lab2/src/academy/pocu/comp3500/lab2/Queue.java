@@ -10,11 +10,13 @@ public final class Queue {
     public void enqueue(final int data) {
         ++size;
         if (head == null) {
-            head = LinkedList.append(null, data);
+            head = LinkedList.prepend(null, data);
             tail = head;
-            return;
+        } else {
+            Node node = new Node(data);
+            tail.setNext(node);
+            tail = node;
         }
-        tail = LinkedList.append(tail, data);
     }
 
     public int peek() {
@@ -22,12 +24,12 @@ public final class Queue {
     }
 
     public int dequeue() {
-        int dequeue = head.getData();
+        int peek = peek();
         head = LinkedList.removeAt(head, 0);
 
         --size;
 
-        return dequeue;
+        return peek;
     }
 
     public int getSize() {

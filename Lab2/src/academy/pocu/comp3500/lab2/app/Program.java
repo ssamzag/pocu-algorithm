@@ -60,9 +60,14 @@ public class Program {
 
             assert (next.getData() == 12);
 
-            next = next.getNextOrNull();
+            root = LinkedList.insertAt(root, 1, 55);
 
-            assert (next.getData() == 10);
+            next = root.getNextOrNull();
+
+            assert (next.getData() == 55);
+
+            root = LinkedList.insertAt(root, 14, 12);
+            root = LinkedList.insertAt(root, -1, 12);
         }
 
         {
@@ -130,14 +135,15 @@ public class Program {
             Node root1 = LinkedList.append(null, 10);
 
             root1 = LinkedList.append(root1, 11);
-            //root1 = LinkedList.append(root1, 12);
+            root1 = LinkedList.append(root1, 12);
+            root1 = LinkedList.append(root1, 13);
+            root1 = LinkedList.append(root1, 14);
+            root1 = LinkedList.append(root1, 15);
 
-            Node root2 = LinkedList.append(null, 13);
+            Node root2 = LinkedList.append(null, 16);
 
-            root2 = LinkedList.append(root2, 14);
-            root2 = LinkedList.append(root2, 15);
-            root2 = LinkedList.append(root2, 16);
             root2 = LinkedList.append(root2, 17);
+            root2 = LinkedList.append(root2, 18);
 
             Node newRoot = LinkedList.interleaveOrNull(root1, root2); // newRoot: 10, list: 10 -> 13 -> 11 -> 14 -> 12 -> 15
 
@@ -145,7 +151,7 @@ public class Program {
 
             Node next = newRoot.getNextOrNull();
 
-            assert (next.getData() == 13);
+            assert (next.getData() == 16);
 
             next = next.getNextOrNull();
 
@@ -153,27 +159,23 @@ public class Program {
 
             next = next.getNextOrNull();
 
-            assert (next.getData() == 14);
-
-            next = next.getNextOrNull();
-
-            assert (next.getData() == 15);
-
-            next = next.getNextOrNull();
-
-            assert (next.getData() == 16);
-
-            next = next.getNextOrNull();
-
             assert (next.getData() == 17);
 
-            //next = next.getNextOrNull();
+            next = next.getNextOrNull();
 
-            //assert (next.getData() == 12);
+            assert (next.getData() == 12);
 
-            //next = next.getNextOrNull();
+            next = next.getNextOrNull();
 
-            //assert (next == null);
+            assert (next.getData() == 18);
+
+            next = next.getNextOrNull();
+            assert (next.getData() == 13);
+            next = next.getNextOrNull();
+            assert (next.getData() == 14);
+            next = next.getNextOrNull();
+            assert (next.getData() == 15);
+
         }
 
         {
@@ -261,8 +263,13 @@ public class Program {
             queue.enqueue(20);
             queue.enqueue(21);
 
+
             int data = queue.dequeue();
 
+            queue.enqueue(22);
+            queue.enqueue(23);
+            queue.enqueue(22);
+            queue.enqueue(23);
             assert (data == 20);
 
             data = queue.dequeue();

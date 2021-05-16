@@ -115,6 +115,7 @@ public class LinkedList {
         if (rootOrNull == null || index < 0) {
             return null;
         }
+
         Node current = rootOrNull;
         int idx = 0;
 
@@ -135,16 +136,14 @@ public class LinkedList {
 
         Node current = rootOrNull;
         Node prev = null;
-        Node next = null;
 
         while (current != null) {
-            next = current.getNextOrNull();
+            Node next = current.getNextOrNull();
 
             current.setNext(prev);
             prev = current;
             current = next;
         }
-
 
         return prev;
     }
@@ -154,13 +153,11 @@ public class LinkedList {
             return null;
         }
 
-
         Node current0 = root0OrNull;
         Node current1 = root1OrNull;
         Node temp0;
         Node temp1;
 
-        Node newNode = null;
         Node result = current0;
 
         while (current0 != null && current1 != null) {
