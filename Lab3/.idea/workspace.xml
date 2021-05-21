@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="762f39db-2c87-4f00-a8c9-eaebd2eda5ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Assignment1/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Assignment1/src/academy/pocu/comp3500/assignment1/PocuBasketballAssociation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/pocu/comp3500/lab3/MissionControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignment1/src/academy/pocu/comp3500/assignment1/pba/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/src/academy/pocu/comp3500/assignment1/pba/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/src/academy/pocu/comp3500/lab2/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/src/academy/pocu/comp3500/lab2/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/src/academy/pocu/comp3500/lab2/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/src/academy/pocu/comp3500/lab2/Queue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/pocu/comp3500/lab3/MissionControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/pocu/comp3500/lab3/MissionControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/academy/pocu/comp3500/lab3/app/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/pocu/comp3500/lab3/app/Program.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579670366270</updated>
-      <workItem from="1621558085294" duration="4355000" />
+      <workItem from="1621558085294" duration="7555000" />
     </task>
     <servers />
   </component>
@@ -98,6 +89,16 @@
           <url>file://$PROJECT_DIR$/src/academy/pocu/comp3500/lab3/app/Program.java</url>
           <line>95</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/academy/pocu/comp3500/lab3/app/Program.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/academy/pocu/comp3500/lab3/app/Program.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
