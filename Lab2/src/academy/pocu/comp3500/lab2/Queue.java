@@ -8,15 +8,16 @@ public final class Queue {
     private int size;
 
     public void enqueue(final int data) {
-        ++size;
+        Node node = new Node(data);
+
         if (head == null) {
-            head = LinkedList.prepend(null, data);
-            tail = head;
+            head = node;
         } else {
-            Node node = new Node(data);
             tail.setNext(node);
-            tail = node;
         }
+
+        tail = node;
+        ++size;
     }
 
     public int peek() {
