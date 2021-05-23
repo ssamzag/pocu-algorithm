@@ -95,11 +95,8 @@ public final class PocuBasketballAssociation {
     public static Player findPlayerPointsPerGame(final Player[] players, int targetPoints) {
         int low = 0;
         int high = players.length - 1;
-        boolean bFound = false;
-        Player resultPlayer = null;
 
         while (low <= high) {
-
             int mid = (low + high) / 2;
 
             if (players[mid].getPointsPerGame() < targetPoints) {
@@ -107,31 +104,21 @@ public final class PocuBasketballAssociation {
             } else if (players[mid].getPointsPerGame() > targetPoints) {
                 high = mid - 1;
             } else {
-                resultPlayer = players[mid];
-                bFound = true;
-                break;
+                return players[mid];
             }
         }
 
-        if (!bFound) {
-            int lowAbs = Math.abs(targetPoints - players[low].getPointsPerGame());
-            int highAbs = Math.abs(players[high].getPointsPerGame() - targetPoints);
+        int lowAbs = Math.abs(targetPoints - players[low].getPointsPerGame());
+        int highAbs = Math.abs(players[high].getPointsPerGame() - targetPoints);
 
-            resultPlayer = lowAbs <= highAbs ? players[low] : players[high];
-        }
-
-
-        return resultPlayer;
+        return lowAbs <= highAbs ? players[low] : players[high];
     }
 
     public static Player findPlayerShootingPercentage(final Player[] players, int targetShootingPercentage) {
         int low = 0;
         int high = players.length - 1;
-        boolean bFound = false;
-        Player resultPlayer = null;
 
         while (low <= high) {
-
             int mid = (low + high) / 2;
 
             if (players[mid].getShootingPercentage() < targetShootingPercentage) {
@@ -139,32 +126,85 @@ public final class PocuBasketballAssociation {
             } else if (players[mid].getShootingPercentage() > targetShootingPercentage) {
                 high = mid - 1;
             } else {
-                resultPlayer = players[mid];
-                bFound = true;
-                break;
+                return players[mid];
             }
         }
 
-        if (!bFound) {
-            int lowAbs = Math.abs(targetShootingPercentage - players[low].getShootingPercentage());
-            int highAbs = Math.abs(players[high].getShootingPercentage() - targetShootingPercentage);
+        int lowAbs = Math.abs(targetShootingPercentage - players[low].getShootingPercentage());
+        int highAbs = Math.abs(players[high].getShootingPercentage() - targetShootingPercentage);
 
-            resultPlayer = lowAbs <= highAbs ? players[low] : players[high];
-        }
-
-
-        return resultPlayer;
+        return lowAbs <= highAbs ? players[low] : players[high];
     }
 
     public static long find3ManDreamTeam(final Player[] players, final Player[] outPlayers, final Player[] scratch) {
-        return -1;
+        heapsort2(players);
+        int result = 0;
+        int minAssist = Integer.MAX_VALUE;
+
+        for (int i = 0; i < 3; i++) {
+            outPlayers[i] = players[i];
+            result += outPlayers[i].getPassesPerGame();
+            minAssist = Math.min(outPlayers[i].getAssistsPerGame(), minAssist);
+        }
+
+        return (long) result * minAssist;
     }
 
     public static long findDreamTeam(final Player[] players, int k, final Player[] outPlayers, final Player[] scratch) {
-        return -1;
+        heapsort2(players);
+        int result = 0;
+        int minAssist = Integer.MAX_VALUE;
+
+        for (int i = 0; i < k; i++) {
+            outPlayers[i] = players[i];
+            result += outPlayers[i].getPassesPerGame();
+            minAssist = Math.min(outPlayers[i].getAssistsPerGame(), minAssist);
+        }
+
+        return (long) result * minAssist;
     }
 
     public static int findDreamTeamSize(final Player[] players, final Player[] scratch) {
         return -1;
+    }
+
+    public static void heapsort2(Player[] arr) {
+        int size = arr.length;
+
+        int parentIdx = (size - 2) / 2;
+
+        for (int i = parentIdx; i >= 0; i--) {
+            heapify2(arr, i, size - 1);
+        }
+
+        for (int i = size - 1; i > 0; i--) {
+            swap2(arr, 0, i);
+            heapify2(arr, 0, i - 1);
+        }
+    }
+
+    private static void swap2(Player[] players, int i, int j) {
+        Player temp = players[i];
+        players[i] = players[j];
+        players[j] = temp;
+    }
+
+    private static void heapify2(Player[] players, int parentIdx, int lastIdx) {
+        int leftChildIdx = 2 * parentIdx + 1;
+        int rightChildIdx = 2 * parentIdx + 2;
+        int largestIdx = parentIdx;
+
+        if (leftChildIdx < lastIdx && players[largestIdx].getAssistsPerGame() * players[largestIdx].getPassesPerGame() > players[leftChildIdx].getAssistsPerGame() * players[leftChildIdx].getPassesPerGame()) {
+            largestIdx = leftChildIdx;
+        }
+
+        if (rightChildIdx < lastIdx && players[largestIdx].getAssistsPerGame() * players[largestIdx].getPassesPerGame() > players[rightChildIdx].getAssistsPerGame() * players[rightChildIdx].getPassesPerGame()) {
+            largestIdx = rightChildIdx;
+        }
+
+        if (parentIdx != largestIdx) {
+            swap2(players, largestIdx, parentIdx);
+            heapify2(players, largestIdx, lastIdx);
+        }
     }
 }

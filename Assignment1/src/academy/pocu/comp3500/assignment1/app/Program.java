@@ -68,7 +68,12 @@ public class Program {
                     new Player("Player 4", 10, 10, 15, 25),
                     new Player("Player 5", 11, 12, 6, 77),
                     new Player("Player 6", 15, 0, 12, 61),
-                    new Player("Player 7", 16, 8, 2, 70)
+                    new Player("Player 7", 16, 8, 2, 70),
+                    new Player("Player 8", 30, 8, 2, 70),
+                    new Player("Player 9", 30, 8, 2, 70),
+                    new Player("Player 10", 30, 8, 2, 70),
+                    new Player("Player 11", 30, 8, 2, 70),
+                    new Player("Player 12", 30, 8, 2, 70)
             };
 
             Player player = PocuBasketballAssociation.findPlayerPointsPerGame(players, 12);
@@ -79,6 +84,7 @@ public class Program {
 
             player = PocuBasketballAssociation.findPlayerPointsPerGame(players, 13);
             assert (player.getName().equals("Player 6"));
+
         }
 
         {
