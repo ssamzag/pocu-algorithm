@@ -48,10 +48,7 @@ public final class PocuBasketballAssociation {
                 assists = 0;
                 numPasses = 0;
             }
-
         }
-
-
     }
 
     public static void heapsort(GameStat[] arr) {
@@ -96,11 +93,67 @@ public final class PocuBasketballAssociation {
     }
 
     public static Player findPlayerPointsPerGame(final Player[] players, int targetPoints) {
-        return null;
+        int low = 0;
+        int high = players.length - 1;
+        boolean bFound = false;
+        Player resultPlayer = null;
+
+        while (low <= high) {
+
+            int mid = (low + high) / 2;
+
+            if (players[mid].getPointsPerGame() < targetPoints) {
+                low = mid + 1;
+            } else if (players[mid].getPointsPerGame() > targetPoints) {
+                high = mid - 1;
+            } else {
+                resultPlayer = players[mid];
+                bFound = true;
+                break;
+            }
+        }
+
+        if (!bFound) {
+            int lowAbs = Math.abs(targetPoints - players[low].getPointsPerGame());
+            int highAbs = Math.abs(players[high].getPointsPerGame() - targetPoints);
+
+            resultPlayer = lowAbs <= highAbs ? players[low] : players[high];
+        }
+
+
+        return resultPlayer;
     }
 
     public static Player findPlayerShootingPercentage(final Player[] players, int targetShootingPercentage) {
-        return null;
+        int low = 0;
+        int high = players.length - 1;
+        boolean bFound = false;
+        Player resultPlayer = null;
+
+        while (low <= high) {
+
+            int mid = (low + high) / 2;
+
+            if (players[mid].getShootingPercentage() < targetShootingPercentage) {
+                low = mid + 1;
+            } else if (players[mid].getShootingPercentage() > targetShootingPercentage) {
+                high = mid - 1;
+            } else {
+                resultPlayer = players[mid];
+                bFound = true;
+                break;
+            }
+        }
+
+        if (!bFound) {
+            int lowAbs = Math.abs(targetShootingPercentage - players[low].getShootingPercentage());
+            int highAbs = Math.abs(players[high].getShootingPercentage() - targetShootingPercentage);
+
+            resultPlayer = lowAbs <= highAbs ? players[low] : players[high];
+        }
+
+
+        return resultPlayer;
     }
 
     public static long find3ManDreamTeam(final Player[] players, final Player[] outPlayers, final Player[] scratch) {
