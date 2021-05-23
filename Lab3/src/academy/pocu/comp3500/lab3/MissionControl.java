@@ -51,23 +51,36 @@ public final class MissionControl {
 
     public static ArrayList<Integer> findAltitudeTimes(final int[] altitudes, final int targetAltitude) {
 
-//        ArrayList<Integer> result = new ArrayList<>();
-//
-//        int length = altitudes.length;
-//
-//        if (length == 1) {
-//            result.add(0);
-//            return result;
-//        }
-//
-//        if (length == 0) {
-//            return result;
-//        }
-//
-//        if (altitudes[0] < altitudes[1] && altitudes[length - 2] < altitudes[length - 1]
-//        || altitudes[0] > altitudes[1] && altitudes[length - 2] > altitudes[length - 1]) {
-//            return findAltitudeTimesRecur(altitudes, targetAltitude, 0, result);
-//        }
+        ArrayList<Integer> result = new ArrayList<>();
+
+        int length = altitudes.length;
+
+        if (length == 1) {
+            return findAltitudeTimesRecur(altitudes, targetAltitude, 0, result);
+        }
+
+        if (length == 0) {
+            return result;
+        }
+
+        if (altitudes[0] < altitudes[1] && altitudes[length - 2] < altitudes[length - 1]
+                || altitudes[0] > altitudes[1] && altitudes[length - 2] > altitudes[length - 1]) {
+            return findAltitudeTimesRecur(altitudes, targetAltitude, 0, result);
+        }
+
+        for (int i = 0; i < altitudes.length; i++) {
+            if (altitudes[i] == targetAltitude) {
+                result.add(i);
+                break;
+            }
+        }
+
+        for (int i = altitudes.length - 1; i >= 0; i--) {
+            if (altitudes[i] == targetAltitude) {
+                result.add(i);
+                break;
+            }
+        }
 
         return findAltitudeTimesRecur(altitudes, targetAltitude, 0, new ArrayList<>());
     }
