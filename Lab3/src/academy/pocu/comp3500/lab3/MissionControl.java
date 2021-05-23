@@ -71,7 +71,7 @@ public final class MissionControl {
             }
         }
 
-        if (result.size() == 0){
+        if (result.size() == 0) {
             return result;
         }
 
