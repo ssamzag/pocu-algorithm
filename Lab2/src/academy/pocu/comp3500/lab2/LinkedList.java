@@ -12,16 +12,14 @@ public class LinkedList {
         }
 
         Node current = rootOrNull;
+        Node prev = null;
 
-        while (true) {
-            if (current.getNextOrNull() == null) {
-                Node newNode = new Node(data);
-                current.setNext(newNode);
-                break;
-            }
+        while (current != null) {
+            prev = current;
             current = current.getNextOrNull();
         }
 
+        prev.setNext(new Node(data));
 
         return rootOrNull;
     }
@@ -37,24 +35,30 @@ public class LinkedList {
     }
 
     public static Node insertAt(final Node rootOrNull, final int index, final int data) {
-        if (index == 0) {
-            return LinkedList.prepend(rootOrNull, data);
-        } else if (index < 0) {
+        if (index < 0) {
             return null;
-        } else if (rootOrNull == null) {
-            return null;
+        }
+
+        Node current = rootOrNull;
+        Node prev = null;
+
+        for (int i = 0; i < index; i++) {
+            if (current == null) {
+                return rootOrNull;
+            }
+
+            prev = current;
+            current = current.getNextOrNull();
         }
 
         Node newNode = new Node(data);
-        Node selected = getOrNull(rootOrNull, index - 1);
+        newNode.setNext(current);
 
-        if (selected == null) {
-            return rootOrNull;
+        if (prev == null) {
+            return newNode;
         }
 
-        Node prev1 = selected.getNextOrNull();
-        selected.setNext(newNode);
-        newNode.setNext(prev1);
+        prev.setNext(newNode);
 
         return rootOrNull;
     }
@@ -66,20 +70,23 @@ public class LinkedList {
 
         Node current = rootOrNull;
         Node prev = null;
-        int idx = 0;
 
-        while (current != null) {
-            if (idx++ == index) {
-                if (prev == null) {
-                    return current.getNextOrNull();
-                }
-                prev.setNext(current.getNextOrNull());
-                break;
-            }
-
+        for (int i = 0; i < index; i++) {
             prev = current;
             current = current.getNextOrNull();
+
+            if (current == null) {
+                return rootOrNull;
+            }
         }
+
+        Node next = current.getNextOrNull();
+
+        if (prev == null) {
+            return next;
+        }
+
+        prev.setNext(next);
 
         return rootOrNull;
     }
@@ -151,13 +158,10 @@ public class LinkedList {
 
         Node current0 = root0OrNull;
         Node current1 = root1OrNull;
-        Node temp0;
-        Node temp1;
-        Node result = current0;
 
         while (current0 != null && current1 != null) {
-            temp0 = current0.getNextOrNull();
-            temp1 = current1.getNextOrNull();
+            Node temp0 = current0.getNextOrNull();
+            Node temp1 = current1.getNextOrNull();
 
             if (current0.getNextOrNull() != null) {
                 current1.setNext(current0.getNextOrNull());
@@ -168,6 +172,6 @@ public class LinkedList {
             current1 = temp1;
         }
 
-        return result;
+        return root0OrNull;
     }
 }

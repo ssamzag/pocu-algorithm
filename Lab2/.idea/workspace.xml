@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcdcaf3b-7e04-445c-9a9c-5104888330e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment1/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment1/src/academy/pocu/comp3500/assignment1/PocuBasketballAssociation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignment1/src/academy/pocu/comp3500/assignment1/pba/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignment1/src/academy/pocu/comp3500/assignment1/pba/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/pocu/comp3500/lab2/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/pocu/comp3500/lab2/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/pocu/comp3500/lab2/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/pocu/comp3500/lab2/Queue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +27,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1WdZJsoesIV6hEuE4bdIwuqYgcF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -26,9 +42,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../algorithm_100" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lab3" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -37,13 +58,15 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -60,80 +83,31 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579481363148</updated>
-      <workItem from="1621169011230" duration="22126000" />
+      <workItem from="1621169011230" duration="21510000" />
+      <workItem from="1621227174276" duration="3823000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="761" y="275" key="#Project_Structure" timestamp="1621169109943">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="761" y="275" key="#Project_Structure/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621169109943" />
-    <state x="736" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621190180106">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="736" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621190180106" />
-    <state width="458" height="466" key="DebuggerActiveHint" timestamp="1621191247405">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="458" height="466" key="DebuggerActiveHint/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621191247405" />
-    <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1621185695703">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1061" y="456" key="FileChooserDialogImpl/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621185695703" />
-    <state width="2517" height="482" key="GridCell.Tab.0.bottom" timestamp="1621191313920">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="482" key="GridCell.Tab.0.bottom/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621191313920" />
-    <state width="2517" height="482" key="GridCell.Tab.0.center" timestamp="1621191313920">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="482" key="GridCell.Tab.0.center/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621191313920" />
-    <state width="2517" height="482" key="GridCell.Tab.0.left" timestamp="1621191313920">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="482" key="GridCell.Tab.0.left/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621191313920" />
-    <state width="2517" height="482" key="GridCell.Tab.0.right" timestamp="1621191313920">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="482" key="GridCell.Tab.0.right/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621191313920" />
-    <state width="2517" height="482" key="GridCell.Tab.1.bottom" timestamp="1621191313921">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="482" key="GridCell.Tab.1.bottom/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621191313921" />
-    <state width="2517" height="482" key="GridCell.Tab.1.center" timestamp="1621191313921">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="482" key="GridCell.Tab.1.center/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621191313921" />
-    <state width="2517" height="482" key="GridCell.Tab.1.left" timestamp="1621191313920">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="482" key="GridCell.Tab.1.left/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621191313920" />
-    <state width="2517" height="482" key="GridCell.Tab.1.right" timestamp="1621191313921">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="2517" height="482" key="GridCell.Tab.1.right/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621191313921" />
-    <state x="761" y="275" key="SettingsEditor" timestamp="1621190161254">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="761" y="275" key="SettingsEditor/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621190161254" />
-    <state x="677" y="311" key="new project wizard" timestamp="1621185685228">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="677" y="311" key="new project wizard/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621185685228" />
-    <state x="937" y="331" key="run.anything.popup" timestamp="1621180145021">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="937" y="331" key="run.anything.popup/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1621180145021" />
-  </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/academy/pocu/comp3500/lab2/app/Program.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="academy.pocu.comp3500.lab2.datastructure.Node" memberName="data" />
       </pinned-members>
     </pin-to-top-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lab2$Program.ic" NAME="Program Coverage Results" MODIFIED="1621228778876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
