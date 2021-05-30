@@ -8,6 +8,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Base64;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.zip.CRC32;
 
@@ -30,7 +31,18 @@ public class Cracker {
         int hashIndex = getHashIndex();
 
         if (hashIndex == -1) {
-            return result;
+            for (int i = 0; i < users.length; i++) {
+                String passwordHash = users[i].getPasswordHash();
+                for (RainbowTable rainbowTable : rainbowTables) {
+                    String password = rainbowTable.get(passwordHash);
+                    if (password != null) {
+                        result[i] = password;
+                        break;
+                    }
+
+                }
+            }
+
         }
 
         for (int i = 0; i < users.length; i++) {
@@ -44,33 +56,38 @@ public class Cracker {
 
 
     private int getHashIndex() {
-        User myInfo = Arrays.stream(users).filter((p) -> p.getEmail().equals(email)).collect(Collectors.toList()).get(0);
-        String myPasswordHash = myInfo.getPasswordHash();
+        List<User> myInfo = Arrays.stream(users).filter((p) -> p.getEmail().equals(email)).collect(Collectors.toList());
+
+        if (myInfo.size() == 0) {
+            return -1;
+        }
+
+        String myPasswordHash = myInfo.get(0).getPasswordHash();
 
         if (getMyCrc32().equals(myPasswordHash)) {
             return 0;
         }
 
-        if (encryptMyPassword("MD2").equals(myPasswordHash)) {
+        if (encryptPassword(password, "MD2").equals(myPasswordHash)) {
             return 1;
         }
 
-        if (encryptMyPassword("MD5").equals(myPasswordHash)) {
+        if (encryptPassword(password, "MD5").equals(myPasswordHash)) {
             return 2;
         }
 
-        if (encryptMyPassword("SHA1").equals(myPasswordHash)) {
+        if (encryptPassword(password, "SHA1").equals(myPasswordHash)) {
             return 3;
         }
 
-        if (encryptMyPassword("SHA256").equals(myPasswordHash)) {
+        if (encryptPassword(password, "SHA256").equals(myPasswordHash)) {
             return 4;
         }
 
         return -1;
     }
 
-    private String encryptMyPassword(String hashType) {
+    private String encryptPassword(String password, String hashType) {
         try {
             MessageDigest md = MessageDigest.getInstance(hashType);
 
