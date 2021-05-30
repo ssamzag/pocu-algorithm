@@ -64,7 +64,7 @@ public class Cracker {
             return 2;
         }
 
-        if (encryptMyPasswordBase64("SHA-1").equals(myPasswordHash)) {
+        if (encryptMyPasswordBase64("SHA1").equals(myPasswordHash)) {
             return 3;
         }
 
