@@ -118,7 +118,10 @@ public class Program {
             User[] userTable = new User[] {
                     new User("001", email, "08WISV7yGWsQpUCXlnErNl6ledurwx7pRhPGiS3zhIA="),
                     new User("002", normalUser2, "XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg="),
-                    new User("003", normalUser1, "/Z7d6Us6HBWG5GIez6AHWSJg2irdWAdXKlsO+6WnVhI=")
+                    new User("003", normalUser1, "/Z7d6Us6HBWG5GIez6AHWSJg2irdWAdXKlsO+6WnVhI="),
+                    new User("004", normalUser2, "mvFbM25qlhmShTffMLLmojdlafz51+dz7M7eZWBlKaA="),
+                    new User("005", normalUser2, "HIv+j4AdeXRcRjHQn/82yCqjf8TM5PyUZoPXsza2MDI="),
+                    new User("006", normalUser2, "ZehL4zUy+3hMSBKWdfnv86aCsnFowOp0Syz1juAjN8U="),
             };
 
             Cracker cracker = new Cracker(userTable, email, password);
@@ -127,6 +130,11 @@ public class Program {
             assert(plainTexts[0] == null);
             assert(plainTexts[1] != null && plainTexts[1].equals("password"));
             assert(plainTexts[2] == null);
+
+            assert(plainTexts[3] != null && plainTexts[3].equals("0000"));
+            assert(plainTexts[4] != null && plainTexts[4].equals("letmein"));
+            assert(plainTexts[5] != null && plainTexts[5].equals("qwerty"));
+
         }
     }
 }

@@ -3,6 +3,7 @@ package academy.pocu.comp3500.lab4;
 import academy.pocu.comp3500.lab4.pocuhacker.RainbowTable;
 import academy.pocu.comp3500.lab4.pocuhacker.User;
 
+import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -45,27 +46,25 @@ public class Cracker {
 
 
     private int getHashIndex(User myInfo) {
-        if (crc32().equals(myInfo.getPasswordHash())) {
+        String passwordHash = myInfo.getPasswordHash();
+
+        if (getCrc32().equals(passwordHash)) {
             return 0;
         }
 
-        String md2Hash = encryptThisString("MD2");
-        if (md2Hash.equals(myInfo.getPasswordHash())) {
+        if (encryptThisString("MD2").equals(passwordHash)) {
             return 1;
         }
 
-        String md3Hash = encryptThisString("MD5");
-        if (md3Hash.equals(myInfo.getPasswordHash())) {
+        if (encryptThisString("MD5").equals(passwordHash)) {
             return 2;
         }
 
-        String sha1Hash = encryptThisString("SHA1");
-        if (sha1Hash.equals(myInfo.getPasswordHash())) {
+        if (encryptThisString("SHA1").equals(passwordHash)) {
             return 3;
         }
 
-        String sha256Hash = encryptThisString("SHA256");
-        if (sha256Hash.equals(myInfo.getPasswordHash())) {
+        if (encryptThisString("SHA256").equals(passwordHash)) {
             return 4;
         }
 
@@ -76,7 +75,7 @@ public class Cracker {
         try {
             MessageDigest md = MessageDigest.getInstance(hashType);
 
-            byte[] messageDigest = md.digest(password.getBytes());
+            byte[] messageDigest = md.digest(password.getBytes(StandardCharsets.UTF_8));
 
             Base64.Encoder encoder = Base64.getEncoder();
 
@@ -86,7 +85,7 @@ public class Cracker {
         }
     }
 
-    private String crc32() {
+    private String getCrc32() {
         CRC32 crc32 = new CRC32();
         byte[] crc32Bytes = password.getBytes(StandardCharsets.UTF_8);
 
