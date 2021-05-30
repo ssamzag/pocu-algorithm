@@ -34,6 +34,7 @@ public class Cracker {
                 result[i] = rainbowTables[4].get(passwordHash);
             }
         }
+        
 
         return result;
     }
