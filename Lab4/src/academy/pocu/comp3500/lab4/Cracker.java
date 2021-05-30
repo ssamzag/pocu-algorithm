@@ -30,18 +30,6 @@ public class Cracker {
         int hashIndex = getHashIndex();
 
         if (hashIndex == -1) {
-            for (int i = 0; i < users.length; i++) {
-                String passwordHash = users[i].getPasswordHash();
-                for (RainbowTable rainbowTable : rainbowTables) {
-                    String password = rainbowTable.get(passwordHash);
-                    if (password != null) {
-                        result[i] = password;
-                        break;
-                    }
-
-                }
-            }
-
             return result;
         }
 
@@ -64,30 +52,30 @@ public class Cracker {
 
         String myPasswordHash = myInfo.get(0).getPasswordHash();
 
-        if (getMyCrc32().equals(myPasswordHash)) {
+        if (getMyCrc32Base64().equals(myPasswordHash)) {
             return 0;
         }
 
-        if (encryptPassword(password, "MD2").equals(myPasswordHash)) {
+        if (encryptMyPasswordBase64("MD2").equals(myPasswordHash)) {
             return 1;
         }
 
-        if (encryptPassword(password, "MD5").equals(myPasswordHash)) {
+        if (encryptMyPasswordBase64("MD5").equals(myPasswordHash)) {
             return 2;
         }
 
-        if (encryptPassword(password, "SHA-1").equals(myPasswordHash)) {
+        if (encryptMyPasswordBase64("SHA-1").equals(myPasswordHash)) {
             return 3;
         }
 
-        if (encryptPassword(password, "SHA-256").equals(myPasswordHash)) {
+        if (encryptMyPasswordBase64("SHA-256").equals(myPasswordHash)) {
             return 4;
         }
 
         return -1;
     }
 
-    private String encryptPassword(String password, String hashType) {
+    private String encryptMyPasswordBase64(String hashType) {
         try {
             MessageDigest md = MessageDigest.getInstance(hashType);
 
@@ -100,7 +88,7 @@ public class Cracker {
         }
     }
 
-    private String getMyCrc32() {
+    private String getMyCrc32Base64() {
         CRC32 crc32 = new CRC32();
         byte[] crc32Bytes = password.getBytes(StandardCharsets.UTF_8);
 
