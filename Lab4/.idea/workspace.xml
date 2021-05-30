@@ -61,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579670487642</updated>
-      <workItem from="1622378706786" duration="10443000" />
+      <workItem from="1622378706786" duration="11782000" />
     </task>
     <servers />
   </component>
@@ -85,22 +85,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="572" height="466" key="DebuggerActiveHint/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1622387184323" />
-    <state width="2517" height="485" key="GridCell.Tab.0.bottom" timestamp="1622389116234">
+    <state width="2517" height="387" key="GridCell.Tab.0.bottom" timestamp="1622390573774">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="485" key="GridCell.Tab.0.bottom/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1622389116234" />
-    <state width="2517" height="485" key="GridCell.Tab.0.center" timestamp="1622389116234">
+    <state width="2517" height="387" key="GridCell.Tab.0.bottom/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1622390573774" />
+    <state width="2517" height="387" key="GridCell.Tab.0.center" timestamp="1622390573774">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="485" key="GridCell.Tab.0.center/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1622389116234" />
-    <state width="2517" height="485" key="GridCell.Tab.0.left" timestamp="1622389116234">
+    <state width="2517" height="387" key="GridCell.Tab.0.center/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1622390573774" />
+    <state width="2517" height="387" key="GridCell.Tab.0.left" timestamp="1622390573774">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="485" key="GridCell.Tab.0.left/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1622389116234" />
-    <state width="2517" height="485" key="GridCell.Tab.0.right" timestamp="1622389116234">
+    <state width="2517" height="387" key="GridCell.Tab.0.left/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1622390573774" />
+    <state width="2517" height="387" key="GridCell.Tab.0.right" timestamp="1622390573774">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="485" key="GridCell.Tab.0.right/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1622389116234" />
+    <state width="2517" height="387" key="GridCell.Tab.0.right/3840.155.1920.1140/0.0.2560.1400@0.0.2560.1400" timestamp="1622390573774" />
     <state width="2517" height="485" key="GridCell.Tab.1.bottom" timestamp="1622389116235">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -138,6 +138,6 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Lab4$Program.ic" NAME="Program Coverage Results" MODIFIED="1622389116152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Lab4$Program.ic" NAME="Program Coverage Results" MODIFIED="1622390573752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

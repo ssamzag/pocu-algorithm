@@ -24,7 +24,6 @@ public class Cracker {
         this.password = password;
     }
 
-
     public String[] run(RainbowTable[] rainbowTables) {
         String[] result = new String[users.length];
 
@@ -77,11 +76,11 @@ public class Cracker {
             return 2;
         }
 
-        if (encryptPassword(password, "SHA1").equals(myPasswordHash)) {
+        if (encryptPassword(password, "SHA-1").equals(myPasswordHash)) {
             return 3;
         }
 
-        if (encryptPassword(password, "SHA256").equals(myPasswordHash)) {
+        if (encryptPassword(password, "SHA-256").equals(myPasswordHash)) {
             return 4;
         }
 
