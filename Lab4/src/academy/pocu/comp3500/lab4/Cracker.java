@@ -42,7 +42,7 @@ public class Cracker {
 
                 }
             }
-            
+
             return result;
         }
 
