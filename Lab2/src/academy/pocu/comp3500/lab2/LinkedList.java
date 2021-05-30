@@ -45,24 +45,16 @@ public class LinkedList {
             return null;
         }
 
-        Node current = rootOrNull.getNextOrNull();
-        Node prevNode = rootOrNull;
         Node newNode = new Node(data);
-        int currentIndex = 1;
+        Node selected = getOrNull(rootOrNull, index - 1);
 
-        while (current != null) {
-            if (currentIndex++ == index) {
-                prevNode.setNext(newNode);
-                newNode.setNext(current);
-                return rootOrNull;
-            }
-            prevNode = current;
-            current = current.getNextOrNull();
+        if (selected == null) {
+            return rootOrNull;
         }
 
-        if (currentIndex == index) {
-            prevNode.setNext(newNode);
-        }
+        Node prev1 = selected.getNextOrNull();
+        selected.setNext(newNode);
+        newNode.setNext(prev1);
 
         return rootOrNull;
     }
