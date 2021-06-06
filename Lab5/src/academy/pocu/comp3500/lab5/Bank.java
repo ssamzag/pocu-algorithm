@@ -46,13 +46,13 @@ public class Bank {
         try {
             return KeyFactory.getInstance("RSA").generatePublic(new X509EncodedKeySpec(from));
         } catch (Exception ignored) {
-            
+            var a = ignored;
         }
 
         return null;
     }
 
-    static PrivateKey getPrivateKey(byte[] key) {
+    private PrivateKey getPrivateKey(byte[] key) {
         PrivateKey privateKey = null;
         try {
 
@@ -93,7 +93,7 @@ public class Bank {
         }
     }
 
-    private static KeyPair getKeyPair() {
+    private KeyPair getKeyPair() {
         try {
             KeyPairGenerator generator = KeyPairGenerator.getInstance("RSA");
 
@@ -107,7 +107,7 @@ public class Bank {
         }
     }
 
-    private static String encryptRsa(String plaintext, PublicKey publicKey) {
+    private String encryptRsa(String plaintext, PublicKey publicKey) {
         try {
             Cipher cipher = Cipher.getInstance("RSA");
             cipher.init(Cipher.ENCRYPT_MODE, publicKey);
@@ -124,7 +124,7 @@ public class Bank {
         }
     }
 
-    private static String decryptRsa(String ciphertext, PrivateKey privateKey) {
+    private String decryptRsa(String ciphertext, PrivateKey privateKey) {
         try {
             byte[] bytes = Base64.getDecoder()
                     .decode(ciphertext);
@@ -141,7 +141,7 @@ public class Bank {
         }
     }
 
-    private static String decryptWithPublicKey(String encryptedMessage, PublicKey privateKey) {
+    private String decryptWithPublicKey(String encryptedMessage, PublicKey privateKey) {
         try {
             byte[] bytes = Base64.getDecoder().decode(encryptedMessage);
 
@@ -157,7 +157,7 @@ public class Bank {
         }
     }
 
-    private static byte[] decodeFromHexString(String hexString) {
+    private byte[] decodeFromHexString(String hexString) {
         byte[] bytes = new byte[hexString.length() / 2];
         for (int i = 0; i < hexString.length(); i += 2) {
             int firstDigit = Character.digit(hexString.charAt(i), 16);
@@ -167,7 +167,7 @@ public class Bank {
         return bytes;
     }
 
-    private static String encodeToHexString(byte[] bytes) {
+    private String encodeToHexString(byte[] bytes) {
         StringBuilder result = new StringBuilder();
         for (byte oneByte : bytes) {
             result.append(String.format("%02x", oneByte));
